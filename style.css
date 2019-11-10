@@ -1,0 +1,77 @@
+body {
+  background: #da70d0; /* Old browsers */
+  background: -moz-linear-gradient(top, #da70d0 0%, #8b008b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #da70d0 0%,#8b008b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #da70d0 0%,#8b008b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#da70d0', endColorstr='#8b008b',GradientType=0 ); /* IE6-9 */
+  }
+
+
+
+.reversed {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.hiddenDisplay {
+  display: none;
+}
+
+.pre-revealed {
+  width: 205px;
+  height: 397px;
+}
+
+.readingResult {
+  text-align: center;
+}
+
+.celticCrossContainer > div > div:not(:last-child){
+  transform: translate(0, 50%);
+}
+
+.readingResult > div > div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cardNumber {
+  margin: 0;
+  margin-top: -20px;
+}
+
+.awkward {
+  position: absolute;
+  transform: rotate(-90deg);
+  z-index: 0;
+}
+
+.awkward .revealOnHover {
+  transform: translate(0, -50%) rotate(90deg);
+  z-index: 0;
+}
+
+.revealOnHover {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: rgba(189, 176, 176, 0.88);
+  padding: 10px;
+}
+
+.outerHover:hover .revealOnHover {
+  display: block;
+}
+
+.greyBox {
+  background-color: rgba(189, 176, 176, 0.88);
+  padding: 10px;
+}
+
+.topSpacer {
+  margin-top: 15px;
+}
