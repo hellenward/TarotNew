@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-const cardOptions = window.cards;
-let newReadingArray = cardOptions.slice();
+let cardOptions = window.cards;
 const cardsToShow = [];
 
 const isReversed = () =>{
@@ -13,9 +12,9 @@ const revealHidden = () => {
 }
 
 const chooseCard = () => {
-  let chosenCard = Math.floor(Math.random() * newReadingArray.length);
-  cardsToShow.push(newReadingArray[chosenCard]);
-  newReadingArray.splice(chosenCard, 1);
+  let chosenCard = Math.floor(Math.random() * cardOptions.length);
+  cardsToShow.push(cardOptions[chosenCard]);
+  cardOptions.splice(chosenCard, 1);
 }
 
 const addCard = (destination, card, title, index) => {
@@ -86,7 +85,6 @@ const readingResultThreeCards = (cardsToShow) => {
     </div>
     `)
   const words = ["Past", "Present", "Future"];
-  console.log(newReadingArray.length);
   addCards(cardsToShow, words);
 }
 
@@ -145,7 +143,7 @@ const readingResultHorseshoe = (cardsToShow) => {
 
   $('.readingButton').click(function(){
       $('.clearMe').empty();
-      newReadingArray = cardOptions.slice(); 
+      cardOptions = window.cards;
       cardsToShow.splice(0, cardsToShow.length);
       readingSelection = $('.readingSelection').val();
       if (readingSelection === "select") {
